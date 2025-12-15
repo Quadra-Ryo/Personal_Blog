@@ -12,3 +12,11 @@ Questa sezione raccoglie gli appunti del corso **Analisi 1**, coprendo in modo s
 - **Funzioni di più variabili:** dominio, grafico, curve di livello, limiti e continuità, derivate parziali, differenziale e gradiente, punti stazionari, derivata seconda, matrice Hessiana, massimi e minimi locali interni e su domini limitati e chiusi.
 
 Questi appunti sono pensati per fornire una panoramica completa degli strumenti fondamentali dell’analisi matematica, utili sia per lo studio accademico che per applicazioni in informatica e ingegneria.
+
+```{toctree}
+:hidden:
+:caption: Primo anno
+:maxdepth: 1
+
+single_variable_differential_calculus/00_svdc_overview.md
+```
