@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cs_bachelor/calculus_1/single_variable_differential_calculus/02_functions';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Linguaggi di programmazione" href="../../../programming_languages/00_programming_languages_overview.html" />
+    <link rel="next" title="Funzioni Inverse, Monotone e Simmetrie" href="03_inverse_monotone_symmetry.html" />
     <link rel="prev" title="Insiemi Numerici e Intervalli su ℝ" href="01_number_sets_and_intervals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -160,6 +160,7 @@
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="00_svdc_overview.html">Calcolo Differenziale in Una Variabile</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="01_number_sets_and_intervals.html">Insiemi Numerici e Intervalli su ℝ</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">Funzioni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03_inverse_monotone_symmetry.html">Funzioni Inverse, Monotone e Simmetrie</a></li>
 </ul>
 </details></li>
 </ul>
@@ -327,12 +328,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-biettivita-invertibile">C. Biettivita’ (Invertibile)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funzione-inversa-f-1">3. Funzione Inversa (f^-1)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requisito-fondamentale-la-biettivita">Requisito Fondamentale: La Biettività</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definizione-e-trasformazione">Definizione e Trasformazione</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivazione-perche-serve-la-biettivita">Motivazione: Perché serve la Biettività?</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -452,40 +447,6 @@ La funzione a sinistra è suriettiva in quanto tracciando delle rette orizzontal
 <img alt="bijective" src="../../../_images/bijective.png" /><br />
 La funzione a sinistra è biettiva in quanto tracciando delle rette orizzontali troveremo sempre solo un punto di contatto nel grafico mentre la funzione a destra non è biettiva in quanto si può vedere che le rette orizzontali rosse toccano più di una volta il grafico.</p></li>
 </ul>
-</section>
-</section>
-<section id="funzione-inversa-f-1">
-<h2>3. Funzione Inversa (f^-1)<a class="headerlink" href="#funzione-inversa-f-1" title="Link to this heading">#</a></h2>
-<section id="requisito-fondamentale-la-biettivita">
-<h3>Requisito Fondamentale: La Biettività<a class="headerlink" href="#requisito-fondamentale-la-biettivita" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Regola</strong>: Solo le funzioni <strong>biettive</strong> ammettono una funzione inversa, che si indica con f^-1.</p></li>
-</ul>
-</section>
-<section id="definizione-e-trasformazione">
-<h3>Definizione e Trasformazione<a class="headerlink" href="#definizione-e-trasformazione" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>La funzione inversa scambia il ruolo di dominio e codominio: f^-1: B -&gt; A.</p></li>
-<li><p><strong>Definizione Formale</strong>:
-f^-1(b) = a &lt;=&gt; f(a) = b
-    * <strong>In poche parole</strong>: L’inversa prende un valore b (output di f) e restituisce il suo input originale a.</p></li>
-</ul>
-</section>
-<section id="motivazione-perche-serve-la-biettivita">
-<h3>Motivazione: Perché serve la Biettività?<a class="headerlink" href="#motivazione-perche-serve-la-biettivita" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Motivazione</strong>: La funzione deve essere sia iniettiva che suriettiva per garantire che per ogni elemento b in B, esista <strong>uno e un solo</strong> elemento a in A che le corrisponda (ovvero, che f(a) = b).</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p><strong>Suriettività Garantisce l’Esistenza</strong>:
-    * <strong>Spiegazione</strong>: Per ogni b in B (il nuovo Dominio), la suriettività garantisce che <em>esiste almeno</em> un elemento a in A tale che f(a) = b. Non ci sono “buchi” nel Codominio originale.</p></li>
-<li><p><strong>Iniettività Garantisce l’Unicità</strong>:
-    * <strong>Spiegazione</strong>: L’iniettività garantisce che l’elemento a trovato sia <strong>unico</strong>. Senza questa proprietà, l’inversa non saprebbe quale dei due (o piu’) a restituire.</p></li>
-</ol>
-<ul class="simple">
-<li><p><strong>Conclusione</strong>: Solo quando e’ biettiva, la funzione inversa puo’ essere definita in modo univoco in quanto siamo sicuri che manterrà le caratteristiche viste in “Regola Fondamentale (Proprieta’ delle Corrispondenze)” precedentemente.</p></li>
-</ul>
-<p><img alt="inverse" src="../../../_images/inverse.png" /></p>
 <br>
 <!-- Versions and languages set-up -->
 <style>
@@ -773,11 +734,11 @@ ___\\ \\     // //___
       </div>
     </a>
     <a class="right-next"
-       href="../../../programming_languages/00_programming_languages_overview.html"
+       href="03_inverse_monotone_symmetry.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linguaggi di programmazione</p>
+        <p class="prev-next-title">Funzioni Inverse, Monotone e Simmetrie</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -807,12 +768,6 @@ ___\\ \\     // //___
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-iniettivita">A. Iniettivita’</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-suriettivita">B. Suriettivita’</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-biettivita-invertibile">C. Biettivita’ (Invertibile)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funzione-inversa-f-1">3. Funzione Inversa (f^-1)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requisito-fondamentale-la-biettivita">Requisito Fondamentale: La Biettività</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definizione-e-trasformazione">Definizione e Trasformazione</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivazione-perche-serve-la-biettivita">Motivazione: Perché serve la Biettività?</a></li>
 </ul>
 </li>
 </ul>

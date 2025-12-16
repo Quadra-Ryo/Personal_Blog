@@ -17,4 +17,5 @@ Differential calculus is an essential tool for **mathematics, engineering, compu
 
 01_number_sets_and_intervals.md
 02_functions.md
+03_inverse_monotone_symmetry.md
 ```

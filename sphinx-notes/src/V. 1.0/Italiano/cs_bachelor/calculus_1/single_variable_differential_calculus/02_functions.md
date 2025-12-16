@@ -80,27 +80,3 @@ La funzione a sinistra è suriettiva in quanto tracciando delle rette orizzontal
 * **Criterio Grafico**: Ogni retta orizzontale incontra il grafico in **UN SOLO punto**.  
 ![bijective](media/functions/bijective.png)  
 La funzione a sinistra è biettiva in quanto tracciando delle rette orizzontali troveremo sempre solo un punto di contatto nel grafico mentre la funzione a destra non è biettiva in quanto si può vedere che le rette orizzontali rosse toccano più di una volta il grafico. 
-
-## 3. Funzione Inversa (f^-1)
-
-### Requisito Fondamentale: La Biettività
-* **Regola**: Solo le funzioni **biettive** ammettono una funzione inversa, che si indica con f^-1.
-
-### Definizione e Trasformazione
-* La funzione inversa scambia il ruolo di dominio e codominio: f^-1: B -> A.
-* **Definizione Formale**:
-f^-1(b) = a <=> f(a) = b
-    * **In poche parole**: L'inversa prende un valore b (output di f) e restituisce il suo input originale a.
-
-### Motivazione: Perché serve la Biettività?
-* **Motivazione**: La funzione deve essere sia iniettiva che suriettiva per garantire che per ogni elemento b in B, esista **uno e un solo** elemento a in A che le corrisponda (ovvero, che f(a) = b).
-
-1.  **Suriettività Garantisce l'Esistenza**:
-    * **Spiegazione**: Per ogni b in B (il nuovo Dominio), la suriettività garantisce che *esiste almeno* un elemento a in A tale che f(a) = b. Non ci sono "buchi" nel Codominio originale.
-
-2.  **Iniettività Garantisce l'Unicità**:
-    * **Spiegazione**: L'iniettività garantisce che l'elemento a trovato sia **unico**. Senza questa proprietà, l'inversa non saprebbe quale dei due (o piu') a restituire.
-
-* **Conclusione**: Solo quando e' biettiva, la funzione inversa puo' essere definita in modo univoco in quanto siamo sicuri che manterrà le caratteristiche viste in "Regola Fondamentale (Proprieta' delle Corrispondenze)" precedentemente.
-
-![inverse](media/functions/inverse.png)
