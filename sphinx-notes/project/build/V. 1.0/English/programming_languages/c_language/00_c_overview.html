@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduzione al C &#8212; CS notes 1.0 documentation</title>
+    <title>Introduction to C &#8212; CS notes 1.0 documentation</title>
   
   
   
@@ -167,7 +167,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../00_programming_languages_overview.html">Programming Languages</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduzione al C</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to C</a></li>
 </ul>
 </details></li>
 </ul>
@@ -295,7 +295,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -306,11 +308,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduzione al C</h1>
+    <h1>Introduction to C</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-c">What is C?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-characteristics">Key Characteristics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-study-c-today">Why study C today?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -320,8 +332,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="introduzione-al-c">
-<h1>Introduzione al C<a class="headerlink" href="#introduzione-al-c" title="Link to this heading">#</a></h1>
+  <section id="introduction-to-c">
+<h1>Introduction to C<a class="headerlink" href="#introduction-to-c" title="Link to this heading">#</a></h1>
+<p>This documentation is intended for an audience that already possesses at least basic programming knowledge. It is designed to be <strong>highly practical</strong> with minimal theoretical overhead.</p>
+<section id="what-is-c">
+<h2>What is C?<a class="headerlink" href="#what-is-c" title="Link to this heading">#</a></h2>
+<p>C is a low-level, legacy language that has remained remarkably stable over the decades. While its grammar, constructs, and standard libraries have seen little change, the most significant improvements have occurred at the compiler level and in the efficiency of the underlying hardware assumptions.</p>
+<p>The C language is built upon a few core concepts and a very limited set of keywords. Because of this simplicity, it is <strong>easy to learn but difficult to master</strong>. Internalizing these core ideas is essential before they can be applied effectively.</p>
+<p>While the initial learning curve can be steep, the concepts you master in C—such as memory addressing and data representation—will be directly applicable to almost any other programming language, including high-level ones.</p>
+</section>
+<section id="key-characteristics">
+<h2>Key Characteristics<a class="headerlink" href="#key-characteristics" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Compiled Language:</strong> C does not require an interpreter. Once compiled, the code is translated into machine language (Binary/Assembly) to be executed directly by the CPU.</p></li>
+<li><p><strong>Manual Memory Management:</strong> Unlike modern languages with Garbage Collection (like Java or Python), C gives you full control over memory. You are responsible for allocating and freeing memory, which allows for extreme optimization but requires high precision.</p></li>
+<li><p><strong>The Power of Pointers:</strong> C allows direct manipulation of memory addresses. This is the language’s most powerful feature, enabling efficient data structure handling and system-level programming.</p></li>
+<li><p><strong>The Build Pipeline:</strong> Understanding C means understanding how a program is built. The process follows a specific flow:</p>
+<ol class="arabic simple">
+<li><p><strong>Preprocessing</strong> (handling <code class="docutils literal notranslate"><span class="pre">#include</span></code> and <code class="docutils literal notranslate"><span class="pre">#define</span></code>)</p></li>
+<li><p><strong>Compiling</strong> (translation to assembly)</p></li>
+<li><p><strong>Assembling</strong> (creating object files)</p></li>
+<li><p><strong>Linking</strong> (combining object files and libraries into an executable)</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="why-study-c-today">
+<h2>Why study C today?<a class="headerlink" href="#why-study-c-today" title="Link to this heading">#</a></h2>
+<p>Even though it is “old,” C remains the backbone of modern computing. It is the language of operating systems (Windows, Linux, macOS), embedded systems, high-performance engines, and even the compilers of other languages. Learning C isn’t just about writing code; it’s about understanding <strong>how a computer actually works</strong>.</p>
 <br>
 <!-- Versions and languages set-up -->
 <style>
@@ -585,6 +623,7 @@ ___\\ \\     // //___
 
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></section>
+</section>
 
 
                 </article>
@@ -612,6 +651,23 @@ ___\\ \\     // //___
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-c">What is C?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-characteristics">Key Characteristics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-study-c-today">Why study C today?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

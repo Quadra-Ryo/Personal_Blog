@@ -295,7 +295,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -311,6 +313,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cose-il-c">Cos’è il C?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caratteristiche-fondamentali">Caratteristiche Fondamentali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perche-studiare-il-c-oggi">Perché studiare il C oggi?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -322,6 +334,32 @@ document.write(`
                   
   <section id="introduzione-al-c">
 <h1>Introduzione al C<a class="headerlink" href="#introduzione-al-c" title="Link to this heading">#</a></h1>
+<p>Questa documentazione è consigliata a un pubblico con già conoscenze, anche minime, di programmazione. Questa sezione sarà ampiamente improntata alla <strong>pratica</strong> e poco alla teoria.</p>
+<section id="cose-il-c">
+<h2>Cos’è il C?<a class="headerlink" href="#cose-il-c" title="Link to this heading">#</a></h2>
+<p>Il C è un linguaggio di basso livello (<em>low level</em>) che, nonostante l’età, è rimasto estremamente stabile. Negli anni non ha subito stravolgimenti a livello di grammatica o costrutti; le migliorie principali hanno riguardato l’efficienza dei compilatori e la capacità di ottimizzazione sulle macchine moderne.</p>
+<p>Il linguaggio C è composto da pochi concetti e pochissime parole chiave (<em>keywords</em>). Per questo motivo, tende a essere <strong>semplice da imparare ma difficile da applicare</strong>: è fondamentale interiorizzare i suoi meccanismi di base prima di poterli utilizzare con padronanza.</p>
+<p>Sebbene la curva di apprendimento iniziale possa sembrare ripida, i concetti appresi (come la gestione degli indirizzi di memoria) sono universali e ti permetteranno di comprendere molto più facilmente anche i linguaggi di alto livello.</p>
+</section>
+<section id="caratteristiche-fondamentali">
+<h2>Caratteristiche Fondamentali<a class="headerlink" href="#caratteristiche-fondamentali" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Linguaggio Compilato:</strong> Il C non ha bisogno di interpreti. Una volta scritto, il codice viene tradotto in linguaggio macchina (Assembly/Binario) per essere eseguito direttamente dall’hardware.</p></li>
+<li><p><strong>Gestione Manuale della Memoria:</strong> A differenza di Java o Python, il C non ha un <em>Garbage Collector</em>. Sei tu a decidere quando allocare e quando liberare la memoria (tramite <code class="docutils literal notranslate"><span class="pre">malloc</span></code> e <code class="docutils literal notranslate"><span class="pre">free</span></code>). Questo garantisce prestazioni massime, ma richiede grande attenzione per evitare bug.</p></li>
+<li><p><strong>Puntatori:</strong> È lo strumento più potente del C. Permette di manipolare direttamente gli indirizzi di memoria, offrendo un controllo totale sui dati e sulla struttura del software.</p></li>
+<li><p><strong>Il Ciclo di Vita del Codice (Build Pipeline):</strong> Programmare in C significa capire come un file di testo diventa un eseguibile attraverso quattro fasi:</p>
+<ol class="arabic simple">
+<li><p><strong>Preprocessing:</strong> Gestione delle direttive come <code class="docutils literal notranslate"><span class="pre">#include</span></code> e <code class="docutils literal notranslate"><span class="pre">#define</span></code>.</p></li>
+<li><p><strong>Compilazione:</strong> Traduzione del codice in Assembly.</p></li>
+<li><p><strong>Assemblamento:</strong> Creazione dei file oggetto (binari intermedi).</p></li>
+<li><p><strong>Linking:</strong> Unione dei file oggetto e delle librerie in un unico file eseguibile.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="perche-studiare-il-c-oggi">
+<h2>Perché studiare il C oggi?<a class="headerlink" href="#perche-studiare-il-c-oggi" title="Link to this heading">#</a></h2>
+<p>Studiare il C non significa solo imparare un linguaggio, ma capire <strong>come funziona un computer</strong>. È ancora oggi il cuore pulsante dei sistemi operativi (Linux, Windows, macOS), dei driver, dei sistemi embedded e dei motori grafici ad alte prestazioni.</p>
 <br>
 <!-- Versions and languages set-up -->
 <style>
@@ -585,6 +623,7 @@ ___\\ \\     // //___
 
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></section>
+</section>
 
 
                 </article>
@@ -612,6 +651,23 @@ ___\\ \\     // //___
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cose-il-c">Cos’è il C?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caratteristiche-fondamentali">Caratteristiche Fondamentali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perche-studiare-il-c-oggi">Perché studiare il C oggi?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
