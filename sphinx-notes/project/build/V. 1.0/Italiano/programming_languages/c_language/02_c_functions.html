@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Funzioni e variabili &#8212; CS notes 1.0 documentation</title>
+    <title>Funzioni in C &#8212; CS notes 1.0 documentation</title>
   
   
   
@@ -48,6 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'programming_languages/c_language/02_c_functions';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Variabili e Memoria in C" href="03_c_variables.html" />
     <link rel="prev" title="Compilatore C e Hello World" href="01_c_compiler.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -169,7 +170,8 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../00_programming_languages_overview.html">Linguaggi di Programmazione</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_c_overview.html">Introduzione al C</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_c_compiler.html">Compilatore C e Hello World</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Funzioni e variabili</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Funzioni in C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_c_variables.html">Variabili e Memoria in C</a></li>
 </ul>
 </details></li>
 </ul>
@@ -312,7 +314,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Funzioni e variabili</h1>
+    <h1>Funzioni in C</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -325,7 +327,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dichiarazione-di-una-funzione">Dichiarazione di una funzione</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printf">Printf</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main">Main</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabili">Variabili</a></li>
 </ul>
             </nav>
         </div>
@@ -337,8 +338,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="funzioni-e-variabili">
-<h1>Funzioni e variabili<a class="headerlink" href="#funzioni-e-variabili" title="Link to this heading">#</a></h1>
+  <section id="funzioni-in-c">
+<h1>Funzioni in C<a class="headerlink" href="#funzioni-in-c" title="Link to this heading">#</a></h1>
 <p>In C, una funzione è un blocco di codice che esegue un compito specifico e può restituire un valore.<br />
 Serve a organizzare il programma, evitare duplicazioni e rendere il codice più leggibile e manutenibile.</p>
 <section id="dichiarazione-di-una-funzione">
@@ -442,88 +443,6 @@ Questo implica che in C non può essere scritto codice in uno scope globale all�
 Pur sembrando strano in quanto la funzione main non viene richiamata da nessuna parte all’interno del programma il valore di ritorno del main è fondamentale per segnalare al sistema operativo se il nostro programma ha avuto un esito positivo o negativo.<br />
 Per convenzione (Unix) un programma “main” viene considerato eseguito senza errori quando il valore di ritorno è 0, in ogni altro caso vengono usati valori specifici per simboleggiare errori diversi.<br />
 Oltre a questo in caso dei programmi vengano richiamati in modo concatenato utilizzando un and logico in questo modo <code class="docutils literal notranslate"><span class="pre">./a.exe</span> <span class="pre">&amp;&amp;</span> <span class="pre">ls</span></code> questo comando andrà ad eseguire entrambi i comandi distinti solo se il primo programma non incontra un errore, in caso a.exe ritornasse un numero diverso da 0 infatti il comando ls non verrebbe eseguito (Questo perché grazie ad un meccanismo di <strong>short circuit</strong> sapendo che basta un’espressione falsa per fare sì che l’and logico tra due espressioni ritorni falso il secondo comando non viene nemmeno eseguito in quanto il suo esito non potrebbe andare comunque ad influenzare il ritorno dell’espressione) così facendo possiamo essere certi che al primo errore trovato il mio programma si blocchi senza andare avanti.</p>
-</section>
-<section id="variabili">
-<h2>Variabili<a class="headerlink" href="#variabili" title="Link to this heading">#</a></h2>
-<p>Le variabili sono delle celle di memoria alle quali noi “andiamo a dare un nome” per poi poterci salvare dei dati specifici.<br />
-Possiamo vederle come delle piccole scatole all’interno della nostra memoria al cui interno possiamo andare ad inserire i dati che vogliamo salvare in quel momento.<br />
-Proviamo a scrivere la funzione somma con delle variabili locali per andare a fare la somma di due numeri all’interno del main.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The sum of 3 and 4 is: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Come vedete anche per dichiarare una variabile abbiamo utilizzato una sintassi simile a quella di una funzione, prima il tipo e poi subito dopo il nome che vogliamo assegnare alla variabile.<br />
-In C è necessario tipare esplicitamente le variabili cioè prima di andare ad assegnare un valore ad una variabile dobbiamo specificare di che tipo sia quella variabile (a differenza di linguaggi come python dove una sintassi come <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">5</span></code> è permessa).<br />
-Quello che siamo andati a fare all’interno del programma che abbiamo appena scritto consiste essenzialmente in due passaggi che avvengono contemporaneamente, la creazione di una variabile <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">num1</span></code> e l’inizializzazione della variabile ad un valore di partenza che può essere un numero (<code class="docutils literal notranslate"><span class="pre">num1</span> <span class="pre">=</span> <span class="pre">3;</span></code>) oppure un’espressione (<code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">num1</span> <span class="pre">+</span> <span class="pre">num2;</span></code>).</p>
-<p>Lo stesso programma può essere scritto in altri modi come ad esempio:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">    </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The sum of 3 and 4 is: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Questo codice è sostanzialmente identico al codice che abbiamo scritto precedentemente con l’unica differenza che in questo caso non andiamo ad inizializzare le variabili a nessun valore che quindi partono da un valore di default (Assegnato dal compilatore stesso) ma andiamo a fare un’assegnazione di valori successivamente alla dichiarazione.<br />
-Tutte le variabili che abbiamo visto hanno uno scoping locale, questo significa che esistono solo all’interno della funzione stessa. Per capire meglio questo concetto torniamo all’esempio della funzione sum.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="p">){</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The operation: 3 + 4 = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>In questo caso avremo delle variabili locali all’interno della funzione sum. Cosa succede quindi?</p>
-<p>Innanzitutto capiamo come verranno chiamate le funzioni:</p>
-<ol class="arabic simple">
-<li><p>Essendo l’inizio del comando verrà chiamato il main</p></li>
-<li><p>Essendo che printf ha bisogno di tutti gli argomenti per essere richiamato come seconda funzione chiameremo sum per avere il risultato da passare alla funzione printf</p></li>
-<li><p>Chiameremo infine la funzione printf con tutti gli argomenti disponibili</p></li>
-</ol>
-<p>Ciò si può vedere anche all’interno del file assembly:</p>
-<div class="highlight-assembly notranslate"><div class="highlight"><pre><span></span>call	__main  &lt;-- Main
-movl	$4, %edx
-movl	$3, %ecx
-call	sum     &lt;-- Sum
-movl	%eax, %edx
-leaq	.LC0(%rip), %rax
-movq	%rax, %rcx
-call	printf  &lt;-- Printf
-</pre></div>
-</div>
-<p>Invece a livello di memoria cosa succede?<br />
-Una volta che dal main viene chiamata la funzione sum con <strong>argomenti</strong> (i valori passati ad una funzione durante una chiamata vengono chiamati <strong>argomenti</strong>) 3 e 4 questi valori vengono salvati all’interno dei <strong>parametri</strong> (le variabili utilizzate all’interno della funzione per salvare il valore degli argomenti sono chiamati <strong>parametri</strong>) num1 e num2.<br />
-Quest’ultime (num1 e num2) non sono altro che variabili locali loro stesse.<br />
-Capiamo cosa succede all’interno della memoria quando andiamo a chiamare la funzione sum:</p>
-<ol class="arabic simple">
-<li><p>Una volta chiamata la funzione viene allocata della memoria nello stack per le tre variabili num1, num2 e sum e non gli viene assegnato un valore, è come se venissero create “vuote”</p></li>
-<li><p>Le variabili continuano ad esistere finché la funzione è in esecuzione in quanto stanno venendo usate</p></li>
-<li><p>Una volta eseguito il return le variabili locali all’interno della funzione vengono “distrutte” cioè vengono deallocate dalla memoria e quelle celle di memoria specifiche potranno essere usate per altre chiamate senza rimanere vincolate alle variabili locali</p></li>
-</ol>
-<p>In poche parole le variabili locali sono variabili che vengono create ogni volta che la funzione viene richiamata e rimangono in vita solo durante l’esecuzione della funzione per poi venire “distrutte”.</p>
 <br>
 <!-- Versions and languages set-up -->
 <style>
@@ -809,6 +728,15 @@ ___\\ \\     // //___
         <p class="prev-next-title">Compilatore C e Hello World</p>
       </div>
     </a>
+    <a class="right-next"
+       href="03_c_variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Variabili e Memoria in C</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -828,7 +756,6 @@ ___\\ \\     // //___
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dichiarazione-di-una-funzione">Dichiarazione di una funzione</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printf">Printf</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main">Main</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variabili">Variabili</a></li>
 </ul>
   </nav></div>
 
