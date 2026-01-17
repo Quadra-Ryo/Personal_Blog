@@ -18,6 +18,5 @@ The material is intended as **support for personal study** and as an open refere
 :caption: Index
 :maxdepth: 1
 
-cs_bachelor/00_cs_overview.md
 programming_languages/00_programming_languages_overview.md
 ```

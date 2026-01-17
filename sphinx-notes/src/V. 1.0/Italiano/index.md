@@ -19,6 +19,5 @@ Il materiale è pensato come **supporto allo studio personale** e come riferimen
 :caption: Indice
 :maxdepth: 1
 
-cs_bachelor/00_cs_overview.md
 programming_languages/00_programming_languages_overview.md
 ```
