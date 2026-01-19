@@ -48,18 +48,18 @@ const portfolioData = {
         ],
         projects: [
             {
-                name: 'Computer Science Notes Website',
+                name: 'My Blog',
                 tech: 'Sphinx, Python, Markdown, GitHub Pages',
-                description: 'Sito web di documentazione per appunti di informatica, costruito con Sphinx e pubblicato su GitHub Pages. Include il mio tool Easy Versioning per gestire il versionamento automatico della documentazione.',
+                description: 'Il mio blog personale dove condivido appunti, guide e riflessioni su programmazione, tecnologia e sviluppo software. Costruito con Sphinx e pubblicato su GitHub Pages.',
                 links: {
                     github: 'https://github.com/Quadra-Ryo/Computer_science_notes',
-                    live: 'https://quadra-ryo.github.io/Computer_science_notes/'
+                    live: 'blog/V. 1.0/Italiano/index.html'
                 }
             },
             {
                 name: 'Easy Versioning for Sphinx',
                 tech: 'Python, Sphinx Extension',
-                description: 'Tool personale di versionamento della documentazione per Sphinx. Permette di gestire automaticamente diverse versioni della documentazione tecnica, utilizzato anche nel progetto CS Notes Website.',
+                description: 'Tool personale di versionamento della documentazione per Sphinx. Permette di gestire automaticamente diverse versioni della documentazione tecnica, utilizzato anche nel mio blog.',
                 links: {
                     github: 'https://github.com/Quadra-Ryo/Easy-versioning-sphinx',
                     live: 'https://pypi.org/project/Easy-versioning/'
@@ -210,18 +210,18 @@ const portfolioData = {
         ],
         projects: [
             {
-                name: 'Computer Science Notes Website',
+                name: 'My Blog',
                 tech: 'Sphinx, Python, Markdown, GitHub Pages',
-                description: 'Documentation website for computer science notes, built with Sphinx and published on GitHub Pages. Includes my Easy Versioning tool for automatic documentation version management.',
+                description: 'My personal blog where I share notes, guides and thoughts on programming, technology and software development. Built with Sphinx and published on GitHub Pages.',
                 links: {
                     github: 'https://github.com/Quadra-Ryo/Computer_science_notes',
-                    live: 'https://quadra-ryo.github.io/Computer_science_notes/'
+                    live: 'blog/V. 1.0/English/index.html'
                 }
             },
             {
                 name: 'Easy Versioning for Sphinx',
                 tech: 'Python, Sphinx Extension',
-                description: 'Personal documentation versioning tool for Sphinx. Enables automatic management of different technical documentation versions, also used in CS Notes Website project.',
+                description: 'Personal documentation versioning tool for Sphinx. Enables automatic management of different technical documentation versions, also used in my blog.',
                 links: {
                     github: 'https://github.com/Quadra-Ryo/Easy-versioning-sphinx',
                     live: 'https://pypi.org/project/Easy-versioning/'
