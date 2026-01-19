@@ -12,6 +12,19 @@ function initLanguage() {
     
     // Add event listener to language button
     on('langBtn', 'click', toggleLanguage);
+    
+    // Add event listener to blog button
+    on('blogBtn', 'click', goToBlog);
+}
+
+/**
+ * Navigate to blog based on current language
+ */
+function goToBlog() {
+    const blogPath = currentLanguage === 'it' 
+        ? 'blog/V. 1.0/Italiano/index.html' 
+        : 'blog/V. 1.0/English/index.html';
+    window.location.href = blogPath;
 }
 
 /**
