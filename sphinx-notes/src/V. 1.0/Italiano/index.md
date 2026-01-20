@@ -1,18 +1,17 @@
-# Dispense di informatica 🇮🇹
+# Blog personale 🇮🇹
 
 ## Anteprima del progetto
 
-Questa repository raccoglie **appunti, riassunti e materiale pratico** relativi allo studio dell’**Informatica (corso di laurea triennale e argomenti utili/interessanti che ho approfondito personalmente)**, con particolare attenzione alla chiarezza concettuale e alla correttezza tecnica.
+Questa repository raccoglie **appunti, riassunti e materiale pratico** relativi allo studio dell'**Informatica**, insieme a blog post e articoli su argomenti vari.
 
 Il contenuto include:
-- spiegazioni teoriche
-- esempi pratici
-- schemi riassuntivi
-- note utili allo studio e al ripasso
-- link alle risorse che ho studiato per creare queste dispense
+- Spiegazioni teoriche
+- Esempi pratici
+- Schemi riassuntivi
+- Note utili allo studio e al ripasso
+- Link alle risorse utilizzate
 
-Il materiale è pensato come **supporto allo studio personale** e come riferimento aperto per altri studenti e programmatori che vogliono aumentare le loro skill e competenze.
-
+Il materiale è pensato come **supporto allo studio personale** e come riferimento aperto per studenti, programmatori e chiunque sia curioso di approfondire questi temi.
 
 ```{toctree}
 :hidden:

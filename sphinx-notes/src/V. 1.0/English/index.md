@@ -1,17 +1,17 @@
-# Computer Science Lecture Notes 🇪🇳
+# Personal Blog 🇪🇳
 
 ## Project Overview
 
-This repository collects **notes, summaries, and practical material** related to the study of **Computer Science (Bachelor's degree and useful/interesting topics I personally delved into)**, with particular attention to conceptual clarity and technical accuracy.
+This repository contains **notes, summaries, and practical material** related to the study of **Computer Science**, along with blog posts and articles on various topics.
 
 The content includes:
-- theoretical explanations
-- practical examples
-- summary diagrams
-- useful notes for studying and reviewing
-- links to the resources I studied to create these notes
+- Theoretical explanations
+- Practical examples
+- Summary diagrams
+- Useful notes for study and review
+- Links to resources used
 
-The material is intended as **support for personal study** and as an open reference for other students and programmers who wish to enhance their skills and expertise.
+The material is designed as **personal study support** and as an open reference for students, programmers, and anyone curious to explore these topics.
 
 ```{toctree}
 :hidden:
