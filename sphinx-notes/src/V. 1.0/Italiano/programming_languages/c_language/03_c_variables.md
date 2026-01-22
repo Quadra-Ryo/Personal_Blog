@@ -1,6 +1,6 @@
-# Variabili e Memoria in C
+# Variabili locali e Memoria in C
 
-## Variabili
+## Variabili locali
 
 Le variabili sono delle celle di memoria alle quali noi "andiamo a dare un nome" per poi poterci salvare dei dati specifici.  
 

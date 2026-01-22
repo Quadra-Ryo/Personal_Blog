@@ -1,6 +1,6 @@
-# Variables and Memory in C
+# Local variables and Memory in C
 
-## Variables
+## Local variables
 
 Variables are memory cells to which we "give a name" so we can save specific data in them.
 
