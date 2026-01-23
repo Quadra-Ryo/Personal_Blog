@@ -35,6 +35,12 @@ function setTheme(theme, save = true) {
     const themeBtn = getEl('themeBtn');
     setText(themeBtn, theme === 'dark' ? '☀️' : '🌙');
     
+    // Update profile image
+    const profileImage = getEl('profileImage');
+    if (profileImage) {
+        profileImage.src = theme === 'dark' ? 'src/dark_pfp.png' : 'src/light_pfp.png';
+    }
+    
     // Update circuit colors
     updateCircuitColors(theme);
     
