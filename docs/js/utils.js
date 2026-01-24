@@ -5,17 +5,36 @@
  */
 function createParticles() {
     const container = document.getElementById('particles');
-    const particleCount = 15;
+    
+    // Reduce particle count on mobile for better performance
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 8 : 15;
     
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
+        
+        // Use viewport-relative positioning for better mobile support
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        
+        // Position particles within viewport bounds
+        particle.style.left = Math.random() * vw + 'px';
+        particle.style.top = Math.random() * vh + 'px';
         particle.style.animation = `float ${10 + Math.random() * 10}s infinite ease-in-out`;
         particle.style.animationDelay = Math.random() * 5 + 's';
         container.appendChild(particle);
     }
+    
+    // Reposition particles on resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            container.innerHTML = '';
+            createParticles();
+        }, 500);
+    });
 }
 
 /**

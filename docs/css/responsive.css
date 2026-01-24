@@ -48,6 +48,11 @@
         padding: var(--spacing-md);
     }
     
+    /* Reduce particles on mobile for better performance */
+    .background {
+        opacity: 0.7;
+    }
+    
     .profile {
         width: 200px;
         height: 200px;
