@@ -77,19 +77,19 @@ const portfolioData = {
         education: [
             {
                 degree: 'Laurea Triennale in Informatica',
-                institution: 'Università di Pisa',
+                institution: '<a href="https://www.linkedin.com/school/unipisa/" target="_blank" rel="noopener noreferrer">Università di Pisa</a>',
                 period: '2025 - Presente',
                 description: 'Corso di laurea in Informatica focalizzato su algoritmi, strutture dati e sviluppo software.'
             },
             {
                 degree: 'Diploma IT e Telecomunicazioni',
-                institution: 'ITIS Galileo Galilei - Arezzo',
+                institution: '<a href="https://www.linkedin.com/school/itis-galileo-galilei-arezzo/" target="_blank" rel="noopener noreferrer">ITIS Galileo Galilei - Arezzo</a>',
                 period: '2018 - 2023',
                 description: 'Specializzazione in informatica e telecomunicazioni con focus su programmazione e sistemi embedded.'
             },
             {
                 degree: 'Corso Programmazione Robot FANUC RO03DL',
-                institution: 'Fanuc Academy Italia',
+                institution: '<a href="https://www.linkedin.com/company/fanuc-europe/" target="_blank" rel="noopener noreferrer">Fanuc Academy Italia</a>',
                 period: '10/2023',
                 description: 'Certificazione sulla programmazione di robot industriali FANUC con linguaggio Karel.'
             }
@@ -239,19 +239,19 @@ const portfolioData = {
         education: [
             {
                 degree: 'Bachelor\'s Degree in Computer Science',
-                institution: 'Università di Pisa',
+                institution: '<a href="https://www.linkedin.com/school/unipisa/" target="_blank" rel="noopener noreferrer">Università di Pisa</a>',
                 period: '2025 - Present',
                 description: 'Computer Science degree focused on algorithms, data structures and software development.'
             },
             {
                 degree: 'IT and Telecommunications Diploma',
-                institution: 'ITIS Galileo Galilei - Arezzo',
+                institution: '<a href="https://www.linkedin.com/school/itis-galileo-galilei-arezzo/" target="_blank" rel="noopener noreferrer">ITIS Galileo Galilei - Arezzo</a>',
                 period: '2018 - 2023',
                 description: 'Specialization in computer science and telecommunications with focus on programming and embedded systems.'
             },
             {
                 degree: 'FANUC Robot Programming Course RO03DL',
-                institution: 'Fanuc Academy Italia',
+                institution: '<a href="https://www.linkedin.com/company/fanuc-europe/" target="_blank" rel="noopener noreferrer">Fanuc Academy Italia</a>',
                 period: '10/2023',
                 description: 'Certification in FANUC industrial robot programming with Karel language.'
             }
